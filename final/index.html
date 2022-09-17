@@ -1,0 +1,146 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style/style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="leftContainer">
+      <div class="colored">
+        <img class="bgcolored" src="../images/bg-card-front.png" alt="">
+        <img class="logo" src="../images/card-logo.svg" alt="">
+    
+        <div>
+          <p class="numInsideCard" >0000 0000 0000 0000</p>
+          <div class="flex">
+            <p class="nameInsideCard" >Jane Appleseed</p>
+            <p> <span id="mm" >00</span> /<span id="yy" >00</span>  </p>
+        </div>
+        </div>
+      </div>
+      
+      <div class="uncolored">
+        <img src="../images/bg-card-back.png" alt="">
+        <p class="cvcInsideCard" >000</p>
+        
+      </div>
+      
+    </div>
+    <div class="rightContainer">
+
+      
+      <form action="">
+        <!-- ////////////////// -->
+        <div>
+          <label for="name">
+            Cardholder Name
+          </label>
+          <input  class="fullwidth" 
+          required type="text"
+           oninvalid="inval1()"
+            oninput="val1()"
+              id="name"
+               placeholder="e.g. Jane Appleseed">
+          <div class="err" id="errName">Can't be blank
+          </div>
+      
+    </div>
+    
+    <!-- ////////////////////// -->
+    
+    <div>
+      <label for="cardNumber">
+        Card Number
+        
+      </label>
+      <div >
+        <input 
+        class="fullwidth"
+         required name="cardNumber"
+         type="number"
+          id="cardNumber"
+           oninvalid="inval2()"
+            oninput="val2()"
+              placeholder="  e.g. 1234 5678 9123 0000">
+      </div>
+
+      <!-- <input type="hidden" name=""> -->
+      <div class="err" id="errNumber">Wrong format,numbers only
+      </div>
+    </div>
+    <!-- ///////////////// -->
+    <div class="section3">
+  
+      <div>  
+          <label for="month">
+          Exp. Date (MM/YY)         
+        </label>
+        <div>
+          <input class="width50"
+           required type="number"
+            oninvalid="inval3()"
+             oninput="val3()"
+               id="month"
+                placeholder="MM">
+
+          <input class="width50" 
+          required type="number"
+           oninvalid="inval3()"
+            oninput="val3()"
+              id="year"
+               placeholder="YY">
+
+          <div class="err" id="errDate">Can't be blank
+          </div>
+        </div>
+      </div>
+      <!-- ////////////////////// -->
+    <div>
+      <label for="cvc"> CVC</label>
+      <input class="width50" 
+      required type="number"
+       id="cvc"
+         oninvalid="inval4()"
+          oninput="val4()" 
+           placeholder="e.g. 123">
+      <div class="err" id="errCvc">Can't be blank
+      </div>
+    </div> 
+    </div>
+    <input type="submit"  value="Confirm">
+  </form>
+  
+  
+  
+</div>
+</div>
+
+  <!-- Completed state start -->
+
+  <!-- Thank you!
+  We've added your card details
+  Continue
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+ -->
+ <script src="js/app.js"></script>
+</body>
+</html>
